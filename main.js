@@ -70,10 +70,10 @@ const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
 //Add avatar cube
-const keltonTexture = new THREE.TextureLoader().load('baller.jpg');
+const keltonTexture = new THREE.TextureLoader().load('Kelton.jpg');
 
 const kelton = new THREE.Mesh(
-  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.BoxGeometry(2.6, 3, 3),
   new THREE.MeshBasicMaterial({map: keltonTexture})
 );
 
