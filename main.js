@@ -1,7 +1,12 @@
-import './style.css'
+import './style.css';
 
 import * as THREE from 'three'; //import ThreeJS library
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import spaceimg from './space.jpg';
+import keltonimg from './Kelton.jpg';
+import moonimg from './moon.jpg';
+import normalimg from './normal.jpg';
+
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -66,11 +71,11 @@ function addStar(){
 Array(200).fill().forEach(addStar);
 
 //Add space texture
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load(spaceimg);
 scene.background = spaceTexture;
 
 //Add avatar cube
-const keltonTexture = new THREE.TextureLoader().load('Kelton.jpg');
+const keltonTexture = new THREE.TextureLoader().load(keltonimg);
 
 const kelton = new THREE.Mesh(
   new THREE.BoxGeometry(2.6, 3, 3),
@@ -80,8 +85,8 @@ const kelton = new THREE.Mesh(
 scene.add(kelton);
 
 //Add moon
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(moonimg);
+const normalTexture = new THREE.TextureLoader().load(normalimg);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),

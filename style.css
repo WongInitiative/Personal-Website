@@ -6,7 +6,6 @@ canvas {
   left: 0;
 }
 
-
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
@@ -16,7 +15,6 @@ canvas {
   font-style: normal;
 }
 
-
 main {
   width: 100vw;
   color: white;
@@ -25,12 +23,15 @@ main {
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-  
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+h1,
+h2,
+h3,
+blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -42,53 +43,51 @@ canvas {
   left: 0;
 }
 
+header {
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+}
 
+section {
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
 
-  header {
-    background: var(--dark-bg);
-    grid-column: 2 / span 5;
-    font-size: 2.5rem;
-    padding: 2rem;
-    margin-bottom: var(--spacing);
-  }
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+  text-align: left;
+}
 
-  section {
-    grid-column: 2 / 8;
-    padding: 1rem;
-    background: var(--dark-bg);
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing);
-  }
+blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4rem;
+  display: inline;
+  line-height: 1;
+}
 
-  blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 2 / span 9;
-    margin-bottom: var(--spacing);
-    text-align: left;
-  }
+.light {
+  grid-column: 2 / 9;
+  padding: 4rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
 
-  blockquote p {
-    color: black;
-    background-color: white;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1;
-  }
-
-  .light{
-    grid-column: 2 / 9;
-    padding: 4rem;
-    background: var(--dark-bg);
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing);
-  }
-
-  .left {
-    grid-column: 6 / 12;
-  }
+.left {
+  grid-column: 6 / 12;
+}
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -104,7 +103,8 @@ canvas {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #ccc;
 }
 
@@ -118,7 +118,7 @@ canvas {
 }
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: #777;
   float: right;
@@ -130,24 +130,23 @@ canvas {
 }
 
 .zoom {
-
-  padding-top:  5px;
-  transition: transform .2s; /* Animation */
+  padding-top: 5px;
+  transition: transform 0.2s; /* Animation */
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
 
 .zoom:hover {
-  transform: scale(1.40); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.4
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-
-
 
 .row {
   display: flex;
   column-gap: 20px;
-  height:  100px;
+  height: 100px;
   row-gap: 20px; /* Used by browsers that support `row-gap` */
 }
 
@@ -158,12 +157,13 @@ canvas {
 }
 
 .column1 {
-    flex-basis: 160px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    padding-left:   10px;
+  flex-basis: 160px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-left: 10px;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
